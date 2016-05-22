@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCAAF5ED1CF1E208001C5838 /* OPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAAF5EC1CF1E208001C5838 /* OPC.swift */; };
+		_LinkFileRef_Socket /* Socket.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_Socket" /* Socket.dylib */; };
+		"__src_cc_ref_Packages/Socket-0.5.9/Sources/Socket.swift" /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/Socket-0.5.9/Sources/Socket.swift" /* Socket.swift */; };
+		"__src_cc_ref_Packages/Socket-0.5.9/Sources/SocketProtocols.swift" /* SocketProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/Socket-0.5.9/Sources/SocketProtocols.swift" /* SocketProtocols.swift */; };
+		"__src_cc_ref_Packages/Socket-0.5.9/Sources/SocketUtils.swift" /* SocketUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = "__PBXFileRef_Packages/Socket-0.5.9/Sources/SocketUtils.swift" /* SocketUtils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCAAF5E61CF1B511001C5838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = __RootObject_ /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "______Target_Socket";
+			remoteInfo = Socket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BCAAF5EC1CF1E208001C5838 /* OPC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OPC.swift; path = Sources/OPC.swift; sourceTree = "<group>"; };
+		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		"__PBXFileRef_Packages/Socket-0.5.9/Sources/Socket.swift" /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		"__PBXFileRef_Packages/Socket-0.5.9/Sources/SocketProtocols.swift" /* SocketProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketProtocols.swift; sourceTree = "<group>"; };
+		"__PBXFileRef_Packages/Socket-0.5.9/Sources/SocketUtils.swift" /* SocketUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketUtils.swift; sourceTree = "<group>"; };
+		"__PBXFileRef_Swift-OPC.xcodeproj/Configs/Project.xcconfig" /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Project.xcconfig; path = "Swift-OPC.xcodeproj/Configs/Project.xcconfig"; sourceTree = "<group>"; };
+		"_____Product_Socket" /* Socket.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = Socket.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		"_____Product_SwiftOPC" /* Swift-OPC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "Swift-OPC"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		"___LinkPhase_Socket" /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		"___LinkPhase_SwiftOPC" /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				_LinkFileRef_Socket /* Socket.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		Dependencies_ /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				"_______Group_Socket" /* Socket */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		"___RootGroup_" = {
+			isa = PBXGroup;
+			children = (
+				__PBXFileRef_Package.swift /* Package.swift */,
+				"_____Configs_" /* Configs */,
+				"_____Sources_" /* Sources */,
+				Dependencies_ /* Dependencies */,
+				"____Products_" /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		"____Products_" /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"_____Product_Socket" /* Socket.dylib */,
+				"_____Product_SwiftOPC" /* Swift-OPC */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		"_____Configs_" /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				"__PBXFileRef_Swift-OPC.xcodeproj/Configs/Project.xcconfig" /* Project.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+		"_____Sources_" /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BCAAF5EC1CF1E208001C5838 /* OPC.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		"_______Group_Socket" /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				"__PBXFileRef_Packages/Socket-0.5.9/Sources/Socket.swift" /* Socket.swift */,
+				"__PBXFileRef_Packages/Socket-0.5.9/Sources/SocketProtocols.swift" /* SocketProtocols.swift */,
+				"__PBXFileRef_Packages/Socket-0.5.9/Sources/SocketUtils.swift" /* SocketUtils.swift */,
+			);
+			name = Socket;
+			path = "Packages/Socket-0.5.9/Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"______Target_Socket" /* Socket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "_______Confs_Socket" /* Build configuration list for PBXNativeTarget "Socket" */;
+			buildPhases = (
+				CompilePhase_Socket /* Sources */,
+				"___LinkPhase_Socket" /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Socket;
+			productName = Socket;
+			productReference = "_____Product_Socket" /* Socket.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		"______Target_SwiftOPC" /* Swift-OPC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = "_______Confs_SwiftOPC" /* Build configuration list for PBXNativeTarget "Swift-OPC" */;
+			buildPhases = (
+				CompilePhase_SwiftOPC /* Sources */,
+				"___LinkPhase_SwiftOPC" /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				__Dependency_Socket /* PBXTargetDependency */,
+			);
+			name = "Swift-OPC";
+			productName = SwiftOPC;
+			productReference = "_____Product_SwiftOPC" /* Swift-OPC */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		__RootObject_ /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = "___RootConfs_" /* Build configuration list for PBXProject "Swift-OPC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = "___RootGroup_";
+			productRefGroup = "____Products_" /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"______Target_Socket" /* Socket */,
+				"______Target_SwiftOPC" /* Swift-OPC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CompilePhase_Socket /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				"__src_cc_ref_Packages/Socket-0.5.9/Sources/Socket.swift" /* Socket.swift in Sources */,
+				"__src_cc_ref_Packages/Socket-0.5.9/Sources/SocketProtocols.swift" /* SocketProtocols.swift in Sources */,
+				BCAAF5ED1CF1E208001C5838 /* OPC.swift in Sources */,
+				"__src_cc_ref_Packages/Socket-0.5.9/Sources/SocketUtils.swift" /* SocketUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CompilePhase_SwiftOPC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		__Dependency_Socket /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "______Target_Socket" /* Socket */;
+			targetProxy = BCAAF5E61CF1B511001C5838 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		_ReleaseConf_Socket /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+			};
+			name = Release;
+		};
+		_ReleaseConf_SwiftOPC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+			};
+			name = Release;
+		};
+		"___DebugConf_Socket" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		"___DebugConf_SwiftOPC" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		"_____Release_" /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = "__PBXFileRef_Swift-OPC.xcodeproj/Configs/Project.xcconfig" /* Project.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		"_______Debug_" /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = "__PBXFileRef_Swift-OPC.xcodeproj/Configs/Project.xcconfig" /* Project.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		"___RootConfs_" /* Build configuration list for PBXProject "Swift-OPC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"_______Debug_" /* Debug */,
+				"_____Release_" /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"_______Confs_Socket" /* Build configuration list for PBXNativeTarget "Socket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"___DebugConf_Socket" /* Debug */,
+				_ReleaseConf_Socket /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		"_______Confs_SwiftOPC" /* Build configuration list for PBXNativeTarget "Swift-OPC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"___DebugConf_SwiftOPC" /* Debug */,
+				_ReleaseConf_SwiftOPC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = __RootObject_ /* Project object */;
+}
