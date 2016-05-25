@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Socket
 
 public class OPC {
     public typealias PixelColor = (UInt8, UInt8, UInt8)
