@@ -50,6 +50,7 @@ public class OPC {
         do {
             socket = try Socket.create(family: .inet, type: .stream, proto: .tcp)
             try socket?.connect(to: hostName, port: port)
+            sendConfigPackage()
         } catch {
             print("Cannot create the socket")
         }
