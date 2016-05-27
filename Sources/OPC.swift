@@ -12,6 +12,13 @@ import Socket
 public class OPC {
     public typealias PixelColor = (UInt8, UInt8, UInt8)
     
+    private struct Utility {
+        static func clampColor(color: PixelColor) -> PixelColor {
+            let (r, g, b) = color
+            return (min(255, max(0, r)), min(255, max(0, g)), min(255, max(0, b)))
+        }
+    }
+    
     let hostName: String
     let port: Int32
     var configByte: UInt8 = 0
@@ -89,7 +96,8 @@ public class OPC {
         let hiByte: UInt8 = UInt8(numPixels / 256)
         let loByte: UInt8 = UInt8(numPixels % 256)
         let command: UInt8 = 0
-        let pixelBytes = pixels.flatMap { (r,g,b) -> [UInt8] in
+        let pixelBytes = pixels.flatMap { color -> [UInt8] in
+            let (r, g, b) = Utility.clampColor(color: color)
             return [r,g,b]
         }
         
