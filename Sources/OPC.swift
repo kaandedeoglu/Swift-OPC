@@ -48,7 +48,7 @@ public class OPC {
         disconnect()
         
         do {
-            socket = try Socket.create(family: .inet, type: .stream, proto: .tcp)
+            socket = try Socket.create()
             try socket?.connect(to: hostName, port: port)
             sendConfigPackage()
         } catch {
