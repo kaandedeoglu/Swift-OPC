@@ -14,8 +14,30 @@ public class OPC {
     
     let hostName: String
     let port: Int32
-    
+    var configByte: UInt8 = 0
     var socket: Socket?
+    
+    public var dithering: Bool = true {
+        didSet {
+            if dithering {
+                configByte &= ~0x01
+            } else {
+                configByte |= 0x01
+            }
+            sendConfigPackage()
+        }
+    }
+    
+    public var interpolation: Bool = true {
+        didSet {
+            if interpolation {
+                configByte &= ~0x02
+            } else {
+                configByte |= 0x02
+            }
+            sendConfigPackage()
+        }
+    }
     
     public init(hostName: String, port: Int32) {
         self.hostName = hostName
@@ -33,7 +55,7 @@ public class OPC {
         }
     }
     
-    func checkIfConnected() -> Bool {
+    private func checkIfConnected() -> Bool {
         if socket == nil {
             connect()
             return false
@@ -51,6 +73,11 @@ public class OPC {
         socket?.close()
     }
     
+    private func sendConfigPackage() {
+        let configBytesArray: [UInt8] = [0, 0xFF, 0, 5, 0x00, 0x01, 0x00, 0x02, configByte]
+        sendByteArray(bytes: configBytesArray)
+    }
+    
     public func setPixels(pixels: [PixelColor], channel: UInt8 = 0) {
         guard checkIfConnected() == true else {
             print("Not connected, skipping this command")
@@ -66,11 +93,15 @@ public class OPC {
         }
         
         let resultBytes: [UInt8] = [channel, command, hiByte, loByte] + pixelBytes
-        let resultData = NSData(bytes: resultBytes, length: resultBytes.count * sizeof(UInt8))
+        sendByteArray(bytes: resultBytes)
+    }
+    
+    private func sendByteArray(bytes: [UInt8]) {
+        let bytesData = NSData(bytes: bytes, length: bytes.count * sizeof(UInt8))
         do {
-            try socket?.write(from: resultData)
+            try socket?.write(from: bytesData)
         } catch {
-            "Print cannot send data"
+            print("cannot send data")
         }
     }
 }
