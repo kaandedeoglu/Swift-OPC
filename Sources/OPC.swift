@@ -64,12 +64,7 @@ public class OPC {
     }
     
     private func checkIfConnected() -> Bool {
-        if socket == nil {
-            connect()
-            return false
-        }
-        
-        if socket?.isConnected == false {
+        guard let socket = socket, socket.isConnected else {
             connect()
             return false
         }
