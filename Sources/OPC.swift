@@ -106,7 +106,7 @@ public class OPC {
     }
     
     private func sendByteArray(bytes: [UInt8]) {
-        let bytesData = NSData(bytes: bytes, length: bytes.count * MemoryLayout<UInt8>.size)
+        let bytesData = Data(bytes: bytes, count: bytes.count * MemoryLayout<UInt8>.size)
         do {
             try socket?.write(from: bytesData)
         } catch {
